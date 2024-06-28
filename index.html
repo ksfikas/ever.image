@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-</head>
-    <body>
-
-    <h1>Ever.Image Preview</h1>
     <script>
+        function dec2bin(dec) {
+              return (dec >>> 0).toString(2);
+        }
+        
         function doSomething() {
             alert('Form submitted!');
             return false;
         }
     </script>
+
+</head>
+    <body>
+
+    <h1>Ever.Image Preview</h1>
     
     <form onsubmit="return doSomething()">
       <p><label for="decimal_number">Enter a decimal number</label></p>
-      <textarea id="decimal_number" name="decimal_number" rows="4" cols="50">1025589332541232536987112659821548635426</textarea>
+      <textarea id="decimal_number" name="decimal_number" rows="4" cols="50" type="number">1025589332541232536987112659821548635426</textarea>
       <br>
       <input type="submit" value="Generate Binary Image">
     </form>
