@@ -2,13 +2,15 @@
 <html>
 <head>
     <script>
-        function dec2bin(dec) {
-              return (dec >>> 0).toString(2);
+        function integer_to_binary(integer_number) {
+              return (integer_number >>> 0).toString(2);
         }
         
         function doSomething() {
-            alert('Form submitted!');
-            return false;
+            var integer_number = document.getElementsById('integer_number')[0].value;
+            var binary_number = integer_to_binary(integer_number);
+            alert(binary_number.toString(2));
+            return binary_number.toString(2);
         }
     </script>
 
@@ -18,8 +20,8 @@
     <h1>Ever.Image Preview</h1>
     
     <form onsubmit="return doSomething()">
-      <p><label for="decimal_number">Enter a decimal number</label></p>
-      <input id="decimal_number" name="decimal_number" rows="4" cols="50" type="number">1025589332541232536987112659821548635426</input>
+      <p><label for="integer_number">Enter a decimal number</label></p>
+      <input id="integer_number" name="integer_number" rows="4" cols="50" type="number">1025589332541232536987112659821548635426</input>
       <br>
       <input type="submit" value="Generate Binary Image">
     </form>
