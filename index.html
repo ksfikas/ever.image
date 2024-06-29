@@ -7,9 +7,10 @@
         }
         
         function doSomething() {
-            var integer_number = document.getElementsById('integer_number')[0].value;
+            var integer_number = document.getElementById('integer_number').value;
             var binary_number = integer_to_binary(integer_number);
-            alert(binary_number.toString(2));
+            // alert(binary_number.toString(2));
+            document.getElementById("binary_number").innerHTML = binary_number.toString(2);
             return binary_number.toString(2);
         }
     </script>
@@ -19,14 +20,12 @@
 
     <h1>Ever.Image Preview</h1>
     
-    <form onsubmit="return doSomething()">
-      <p><label for="integer_number">Enter a decimal number</label></p>
-      <input id="integer_number" name="integer_number" rows="4" cols="50" type="number">1025589332541232536987112659821548635426</input>
-      <br>
-      <input type="submit" value="Generate Binary Image">
-    </form>
-
-    <p></p>
+    <p><label for="integer_number">Enter a decimal number</label></p>
+    <input id="integer_number" name="integer_number" rows="4" cols="50" type="number">
+    <br>
+    <input type="button" value="Generate Binary Image" onclick="doSomething()">
+    
+    <p id="binary_number"></p>
 
     </body>
 </html>
