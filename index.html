@@ -20,11 +20,11 @@
 
     <div class="slidecontainer container-fluid">
         <label for="horizontal_lines">Image rows: </label>
-        <input type="range" min="1" max="100" value="50" class="slider" id="horizontal_lines" oninput="print_slider_value('horizontal_lines_value')"> 
+        <input type="range" min="1" max="100" value="50" class="slider" id="horizontal_lines" oninput="print_slider_value(this, 'horizontal_lines_value')"> 
         Value: <span id="horizontal_lines_value"></span>
         <br>
         <label for="vertical_lines">Image columns: </label>
-        <input type="range" min="1" max="100" value="50" class="slider" id="vertical_lines" oninput="print_slider_value('vertical_lines_value')">
+        <input type="range" min="1" max="100" value="50" class="slider" id="vertical_lines" oninput="print_slider_value(this, 'vertical_lines_value')">
         Value: <span id="vertical_lines_value"></span>
     </div>
 
