@@ -6,27 +6,28 @@
 
     <script src="numeric.js"></script>
     <script src="slider.js"></script>
+    <script scr="image.js"></script>
 </head>
-    <body>
+<body>
 
     <h1>Ever.Image Preview</h1>
     
     <div class="numbercontainer container-fluid">
         <label for="integer_number">Enter an integer number: </label>
-        <input id="integer_number" name="integer_number" rows="4" cols="50" type="number">
-        <input type="button" value="Generate Binary Image" onclick="doSomething()">
+        <input id="integer_number" name="integer_number" rows="4" cols="50" type="number" value="100">
+        <input type="button" value="Generate Binary Image" onclick="doSomething(); generate_binary_image(100,100,10000)">
         <label id="binary_number"></label>
     </div>
 
     <div class="slidecontainer container-fluid">
         <label for="horizontal_lines">Image rows: </label>
         <input type="range" min="1" max="100" value="50" class="slider" id="horizontal_lines" oninput="print_slider_value(this, 'horizontal_lines_value')"> 
-        Value: <span id="horizontal_lines_value"></span>
+        Value: <span id="horizontal_lines_value">50px</span>
         <br>
         <label for="vertical_lines">Image columns: </label>
         <input type="range" min="1" max="100" value="50" class="slider" id="vertical_lines" oninput="print_slider_value(this, 'vertical_lines_value')">
-        Value: <span id="vertical_lines_value"></span>
+        Value: <span id="vertical_lines_value">50px</span>
     </div>
 
-    </body>
+</body>
 </html>
