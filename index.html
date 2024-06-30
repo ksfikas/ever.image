@@ -1,33 +1,73 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    <script src="numeric.js"></script>
-    <script src="slider.js"></script>
-    <script src="image.js"></script>
-</head>
-<body>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
 
-    <h1>Ever.Image Preview</h1>
-    
-    <div class="numbercontainer container-fluid">
-        <label for="integer_number">Enter an integer number: </label>
-        <input id="integer_number" name="integer_number" rows="4" cols="50" type="number" value="100">
-        <input type="button" value="Generate Binary Image" onclick="doSomething(); generate_binary_image(500,500,10000)">
-        <label id="binary_number"></label>
-    </div>
+        <script src="numeric.js"></script>
+        <script src="slider.js"></script>
+        <script src="image.js"></script>
+    </head>
 
-    <div class="slidecontainer container-fluid">
-        <label for="horizontal_lines">Image rows: </label>
-        <input type="range" min="1" max="100" value="50" class="slider" id="horizontal_lines" oninput="print_slider_value(this, 'horizontal_lines_value')"> 
-        Value: <span id="horizontal_lines_value">50px</span>
-        <br>
-        <label for="vertical_lines">Image columns: </label>
-        <input type="range" min="1" max="100" value="50" class="slider" id="vertical_lines" oninput="print_slider_value(this, 'vertical_lines_value')">
-        Value: <span id="vertical_lines_value">50px</span>
-    </div>
+    <body>
 
-</body>
+        <div class="container">
+            <h1>Ever.Image Preview</h1>
+            <hr />
+
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-generate-image-tab" data-bs-toggle="pill" data-bs-target="#pills-generate-image" type="button" role="tab" aria-controls="pills-generate-image" aria-selected="false">Generate Image</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+                        aria-selected="false">Contact</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled"
+                        aria-selected="false" disabled>Disabled</button>
+                </li>
+            </ul>
+
+
+
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                    This is where the info will be presented...
+                </div>
+                <div class="tab-pane fade show active" id="pills-generate-image" role="tabpanel" aria-labelledby="pills-generate-image-tab" tabindex="0">
+                    <div class="numbercontainer container-fluid">
+                        <label for="integer_number">Enter an integer number: </label>
+                        <input id="integer_number" name="integer_number" rows="4" cols="50" type="number" value="100">
+                        <input type="button" value="Generate Binary Image"
+                            onclick="doSomething(); generate_binary_image(500,500,10000)">
+                        <label id="binary_number"></label>
+                    </div>
+
+                    <div class="slidecontainer container-fluid">
+                        <label for="horizontal_lines">Image rows: </label>
+                        <input type="range" min="1" max="100" value="50" class="slider" id="horizontal_lines"
+                            oninput="print_slider_value(this, 'horizontal_lines_value')">
+                        Value: <span id="horizontal_lines_value">50px</span>
+                        <br>
+                        <label for="vertical_lines">Image columns: </label>
+                        <input type="range" min="1" max="100" value="50" class="slider" id="vertical_lines"
+                            oninput="print_slider_value(this, 'vertical_lines_value')">
+                        Value: <span id="vertical_lines_value">50px</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+
 </html>

@@ -7,7 +7,7 @@ function generate_binary_image(width, height, binary_number) {
 
     var kostas = new ImageData(width,height);
 
-    var canvas = document.getElementById('canvas');
+    var canvas = document.getElementById('binary_image');
     if (canvas != null)
         canvas.remove();
 
@@ -15,7 +15,7 @@ function generate_binary_image(width, height, binary_number) {
 
     canvas = document.createElement('canvas');
 
-    canvas.id = "CursorLayer";
+    canvas.id = "binary_image";
     canvas.width = width;
     canvas.height = height;
     canvas.style.zIndex = 8;
@@ -26,7 +26,7 @@ function generate_binary_image(width, height, binary_number) {
     var body = document.getElementsByTagName("body")[0];
     body.appendChild(canvas);
 
-    cursorLayer = document.getElementById("CursorLayer");
+    cursorLayer = document.getElementById("binary_image");
 
     console.log(cursorLayer);
 
