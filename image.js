@@ -23,7 +23,12 @@ function create_canvas(width, height) {
 
 
 
-function generate_binary_image(width, height, binary_number) {
+function generate_binary_image() {
+    
+    width = 100;
+    height = 100;
+    
+    
     var image = new Array(width);
 
     for (var i = 0; i < height; i++) {
