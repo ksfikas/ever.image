@@ -8,7 +8,7 @@
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
 
-        <script src="numeric.js"></script>
+        <script src="numeric_functions.js"></script>
         <script src="slider.js"></script>
         <script src="image.js"></script>
     </head>
@@ -49,7 +49,7 @@
                         <label for="integer_number">Enter an integer number: </label>
                         <input id="integer_number" name="integer_number" rows="4" cols="50" type="number" value="100">
                         <input type="button" value="Generate Binary Image"
-                            onclick="doSomething(); generate_binary_image(500,500,10000)">
+                            onclick="convert_integer_to_binary(); generate_binary_image(500,500,10000)">
                         <label id="binary_number"></label>
                     </div>
 
