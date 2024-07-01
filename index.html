@@ -47,7 +47,7 @@
                 <div class="tab-pane fade show active" id="pills-generate-image" role="tabpanel" aria-labelledby="pills-generate-image-tab" tabindex="0">
                     <div class="numbercontainer container-fluid">
                         <label for="integer_number">Enter an integer number: </label>
-                        <input id="integer_number" name="integer_number" rows="4" cols="50" type="number" value="100">
+                        <textarea id="integer_number" name="integer_number" rows="4" cols="50" type="number" value="100"></textarea>
                         <input type="button" value="Generate Binary Image"
                             onclick="convert_integer_to_binary(); generate_binary_image()">
                         <label id="binary_number"></label>
@@ -55,13 +55,14 @@
 
                     <div class="slidecontainer container-fluid">
                         <label for="horizontal_lines">Image rows: </label>
-                        <input type="range" min="1" max="1000" value="500" class="slider" id="horizontal_lines" oninput="this.nextElementSibling.value=this.value">
-                        <input id="horizontal_lines_value" type="number" value="500" oninput="this.previousElementSibling.value=this.value">px
+                        <input type="range" min="1" max="1000" value="50" class="slider" id="horizontal_lines" oninput="this.nextElementSibling.value=this.value">
+                        <input id="horizontal_lines_value" type="number" value="50" oninput="this.previousElementSibling.value=this.value">px
                         <br>
                         <label for="vertical_lines">Image columns: </label>
-                        <input type="range" min="1" max="1000" value="500" class="slider" id="vertical_lines" oninput="this.nextElementSibling.value=this.value">
-                        <input id="vertical_lines_value" type="number" value="500" oninput="this.previousElementSibling.value=this.value">px
+                        <input type="range" min="1" max="1000" value="50" class="slider" id="vertical_lines" oninput="this.nextElementSibling.value=this.value">
+                        <input id="vertical_lines_value" type="number" value="50" oninput="this.previousElementSibling.value=this.value">px
                     </div>
+                    <br>
                 </div>
             </div>
 

@@ -6,5 +6,7 @@ function convert_integer_to_binary() {
 }
 
 function int2bin(integer_number) {
-  return (integer_number >>> 0).toString(2);
+  // return (integer_number >>> 0).toString(2);
+  integer_number = BigInt(integer_number);
+  return (integer_number).toString(2);
 }
