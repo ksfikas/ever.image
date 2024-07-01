@@ -14,9 +14,7 @@ function create_canvas(width, height) {
 
     var body = document.getElementById("pills-generate-image");
     body.appendChild(canvas);
-
     cursorLayer = document.getElementById("binary_image");
-
     console.log(cursorLayer);
 }
 
@@ -25,10 +23,9 @@ function create_canvas(width, height) {
 
 function generate_binary_image() {
     
-    width = 100;
-    height = 100;
-    
-    
+    width = document.getElementById("horizontal_lines").value;
+    height = document.getElementById("vertical_lines").value;
+
     var image = new Array(width);
 
     for (var i = 0; i < height; i++) {
